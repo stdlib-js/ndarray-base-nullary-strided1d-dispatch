@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-09-10)
+## Unreleased (2025-09-13)
 
 <section class="features">
 
@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`c8cc121`](https://github.com/stdlib-js/stdlib/commit/c8cc12198846d498a7999e0c0622fa4721f66e0d) - **docs:** fix comment _(by Athan Reines)_
 -   [`cfe870b`](https://github.com/stdlib-js/stdlib/commit/cfe870b5ab3798377068aba5e239bf50f730f116) - **feat:** add `ndarray/base/nullary-strided1d-dispatch` [(#7821)](https://github.com/stdlib-js/stdlib/pull/7821) _(by Muhammad Haris, Athan Reines, stdlib-bot)_
 
 </details>
