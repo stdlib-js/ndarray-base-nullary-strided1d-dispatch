@@ -52,6 +52,7 @@
     "@stdlib/assert-is-ndarray-like": "^0.2.2",
     "@stdlib/assert-is-object": "^0.2.2",
     "@stdlib/assert-is-plain-object": "^0.2.2",
+    "@stdlib/blas-ext-base-gindex-of-row": "github:stdlib-js/blas-ext-base-gindex-of-row#main",
     "@stdlib/ndarray-base-assert-is-data-type": "^0.2.2",
     "@stdlib/ndarray-base-dtype": "^0.2.2",
     "@stdlib/ndarray-base-dtype-resolve-enum": "^0.2.2",
