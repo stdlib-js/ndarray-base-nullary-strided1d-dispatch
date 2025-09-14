@@ -60,7 +60,7 @@
     "@stdlib/ndarray-base-to-unique-normalized-indices": "github:stdlib-js/ndarray-base-to-unique-normalized-indices#main",
     "@stdlib/ndarray-ndims": "^0.2.2",
     "@stdlib/object-assign": "^0.2.2",
-    "@stdlib/string-format": "^0.2.2",
+    "@stdlib/error-tools-fmtprodmsg": "^0.2.2",
     "@stdlib/types": "^0.4.3",
     "@stdlib/utils-define-nonenumerable-read-only-property": "^0.2.2",
     "@stdlib/error-tools-fmtprodmsg": "^0.2.2"
