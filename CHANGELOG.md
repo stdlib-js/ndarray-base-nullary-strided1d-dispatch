@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-09-14)
+## Unreleased (2025-09-17)
 
 <section class="features">
 
@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`2743732`](https://github.com/stdlib-js/stdlib/commit/27437323cb1d22c53c91f152d6d05153630bc123) - **docs:** fix description _(by Athan Reines)_
 -   [`5dde2ff`](https://github.com/stdlib-js/stdlib/commit/5dde2ff115443aa143dd19022e5593e022401920) - **refactor:** use extended BLAS utility _(by Athan Reines)_
 -   [`5396232`](https://github.com/stdlib-js/stdlib/commit/539623214add7405c45c70f16ef7ab001f5dc0e0) - **refactor:** use base utility _(by Athan Reines)_
 -   [`c8cc121`](https://github.com/stdlib-js/stdlib/commit/c8cc12198846d498a7999e0c0622fa4721f66e0d) - **docs:** fix comment _(by Athan Reines)_
