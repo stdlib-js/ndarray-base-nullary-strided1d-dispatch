@@ -48,7 +48,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import NullaryStrided1dDispatch from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-nullary-strided1d-dispatch@deno/mod.js';
+import NullaryStrided1dDispatch from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-nullary-strided1d-dispatch@v0.1.0-deno/mod.js';
 ```
 
 #### NullaryStrided1dDispatch( table, idtypes, odtypes\[, options] )
@@ -98,7 +98,7 @@ import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtypes@deno/mo
 import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@deno/mod.js';
 import scalar2ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-from-scalar@deno/mod.js';
 import ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-ctor@deno/mod.js';
-import NullaryStrided1dDispatch from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-nullary-strided1d-dispatch@deno/mod.js';
+import NullaryStrided1dDispatch from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-nullary-strided1d-dispatch@v0.1.0-deno/mod.js';
 
 var idt = dtypes( 'real_and_generic' );
 var odt = dtypes( 'all' );
@@ -176,7 +176,7 @@ import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtypes@deno/mo
 import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@deno/mod.js';
 import scalar2ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-from-scalar@deno/mod.js';
 import ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ctor@deno/mod.js';
-import NullaryStrided1dDispatch from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-nullary-strided1d-dispatch@deno/mod.js';
+import NullaryStrided1dDispatch from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-nullary-strided1d-dispatch@v0.1.0-deno/mod.js';
 
 // Define the supported input and output data types:
 var idt = dtypes( 'real_and_generic' );
