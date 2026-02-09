@@ -48,6 +48,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import NullaryStrided1dDispatch from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-nullary-strided1d-dispatch@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/ndarray-base-nullary-strided1d-dispatch/tags). For example,
+
+```javascript
 import NullaryStrided1dDispatch from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-nullary-strided1d-dispatch@v0.1.1-deno/mod.js';
 ```
 
@@ -98,7 +103,7 @@ import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtypes@deno/mo
 import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@deno/mod.js';
 import scalar2ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-from-scalar@deno/mod.js';
 import ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-ctor@deno/mod.js';
-import NullaryStrided1dDispatch from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-nullary-strided1d-dispatch@v0.1.1-deno/mod.js';
+import NullaryStrided1dDispatch from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-nullary-strided1d-dispatch@deno/mod.js';
 
 var idt = dtypes( 'real_and_generic' );
 var odt = dtypes( 'all' );
@@ -176,7 +181,7 @@ import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtypes@deno/mo
 import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@deno/mod.js';
 import scalar2ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-from-scalar@deno/mod.js';
 import ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ctor@deno/mod.js';
-import NullaryStrided1dDispatch from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-nullary-strided1d-dispatch@v0.1.1-deno/mod.js';
+import NullaryStrided1dDispatch from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-nullary-strided1d-dispatch@deno/mod.js';
 
 // Define the supported input and output data types:
 var idt = dtypes( 'real_and_generic' );
