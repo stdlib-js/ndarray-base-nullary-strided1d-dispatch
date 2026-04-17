@@ -1,19 +1,50 @@
-"use strict";var y=function(r,e){return function(){return e||r((e={exports:{}}).exports,e),e.exports}};var q=y(function(ar,R){R.exports={dims:null}});var T=y(function(nr,E){"use strict";var z=require("@stdlib/assert-is-plain-object"),I=require("@stdlib/assert-has-own-property"),N=require("@stdlib/assert-is-integer-array").primitives,P=require("@stdlib/assert-is-empty-collection"),B=require("@stdlib/ndarray-base-to-unique-normalized-indices"),b=require("@stdlib/array-base-join"),v=require("@stdlib/string-format");function L(r,e,a){var t;if(!z(a))return new TypeError(v("invalid argument. Options argument must be an object. Value: `%s`.",a));if(I(a,"dims")){if(r.dims=a.dims,!N(r.dims)&&!P(r.dims))return new TypeError(v("invalid option. `%s` option must be an array of integers. Option: `%s`.","dims",r.dims));if(t=B(r.dims,e-1),t===null)return new RangeError(v("invalid option. `%s` option contains an out-of-bounds dimension index. Option: [%s].","dims",b(r.dims,",")));if(t.length!==r.dims.length)return new Error(v("invalid option. `%s` option contains duplicate indices. Option: [%s].","dims",b(r.dims,",")));r.dims=t}return null}E.exports=L});var C=y(function(tr,S){"use strict";var G=require("@stdlib/utils-define-nonenumerable-read-only-property"),_=require("@stdlib/assert-has-property"),j=require("@stdlib/assert-is-ndarray-like"),H=require("@stdlib/assert-is-object"),J=require("@stdlib/assert-is-function"),l=require("@stdlib/assert-is-collection"),F=require("@stdlib/assert-is-empty-collection"),K=require("@stdlib/assert-is-function-array"),O=require("@stdlib/ndarray-base-assert-is-data-type"),k=require("@stdlib/array-base-assert-contains"),V=require("@stdlib/ndarray-base-nullary-strided1d"),M=require("@stdlib/ndarray-base-dtype-resolve-enum"),Q=require("@stdlib/ndarray-base-dtypes2enums"),U=require("@stdlib/ndarray-ndims"),x=require("@stdlib/ndarray-base-dtype"),W=require("@stdlib/array-base-zero-to"),A=require("@stdlib/array-base-join"),X=require("@stdlib/array-base-copy"),D=require("@stdlib/array-base-every-by"),Y=require("@stdlib/blas-ext-base-gindex-of-row").ndarray,Z=require("@stdlib/object-assign"),n=require("@stdlib/string-format"),$=q(),rr=T();function d(r,e,a,t){var u,s;if(!(this instanceof d))return arguments.length>3?new d(r,e,a,t):new d(r,e,a);if(!H(r))throw new TypeError(n("invalid argument. First argument must be an object. Value: `%s`.",r));if(!J(r.default))throw new TypeError(n('invalid argument. First argument must be an object having a "default" property and an associated method.'));if(_(r,"types")&&!l(r.types)&&!F(r.types))throw new TypeError(n('invalid argument. First argument must be an object having a "types" property whose associated value is an array-like object.'));if(_(r,"fcns")&&!K(r.fcns)&&!F(r.fcns))throw new TypeError(n('invalid argument. First argument must be an object having a "fcns" property whose associated value is an array-like object containing functions.'));if(!l(e))throw new TypeError(n("invalid argument. Second argument must be an array-like object. Value: `%s`.",e));for(s=0;s<e.length;s++)if(u=e[s],!l(u)||u.length<1||!D(u,O))throw new TypeError(n("invalid argument. Second argument must contain arrays of data types. Value: `%s`.",e));if(!l(a)||a.length<1||!D(a,O))throw new TypeError(n("invalid argument. Third argument must be an array of data types. Value: `%s`.",a));if(this._table={default:r.default,types:r.types?Q(r.types):[],fcns:r.fcns?X(r.fcns):[]},this._table.types.length!==this._table.fcns.length)throw new Error("invalid argument. First argument specifies an unexpected number of types. An output ndarray data type must be specified for each provided strided function.");return this._idtypes=e,this._odtypes=a,arguments.length>3?this._apply=V.factory(t):this._apply=V,this}G(d.prototype,"assign",function(e){var a,t,u,s,o,f,g,w,m,h,p,c,i;if(u=arguments.length,!j(e))throw new TypeError(n("invalid argument. First argument must be an ndarray-like object. Value: `%s`.",e));if(m=x(e),!k(this._odtypes,m))throw new TypeError(n('invalid argument. First argument must have one of the following data types: "%s". Data type: `%s`.',A(this._odtypes,'", "'),m));for(o=[e],i=1;i<u&&(f=arguments[i],!!j(f));i++)o.push(f);if(i===u-1)a=arguments[i],w=!0;else if(i<u-1)throw new TypeError(n("invalid argument. Argument %d must be an ndarray-like object. Value: `%s`.",i,arguments[i]));for(i=1;i<o.length;i++)if(h=x(o[i]),!k(this._idtypes[i-1],h))throw new TypeError(n('invalid argument. Argument %d must have one of the following data types: "%s". Data type: `%s`.',i,A(this._idtypes[i-1],'", "'),h));if(p=U(e),s=Z({},$),w&&(g=rr(s,p,a),g))throw g;return s.dims===null&&(s.dims=W(p)),t=[M(m)],i=Y(this._table.fcns.length,1,this._table.types,1,1,0,t,1,0),i>=0?c=this._table.fcns[i]:c=this._table.default,this._apply(c,o,s.dims),e});S.exports=d});var er=C();module.exports=er;
+/** @license Apache-2.0 */
+
+'use strict';
+
 /**
-* @license Apache-2.0
+* Constructor for applying a strided function to an ndarray.
 *
-* Copyright (c) 2025 The Stdlib Authors.
+* @module @stdlib/ndarray-base-nullary-strided1d-dispatch
 *
-* Licensed under the Apache License, Version 2.0 (the "License");
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
+* @example
+* var base = require( '@stdlib/blas-ext-base-ndarray-gsorthp' );
+* var dtypes = require( '@stdlib/ndarray-dtypes' );
+* var ndarray2array = require( '@stdlib/ndarray-to-array' );
+* var scalar2ndarray = require( '@stdlib/ndarray-from-scalar' );
+* var ndarray = require( '@stdlib/ndarray-base-ctor' );
+* var NullaryStrided1dDispatch = require( '@stdlib/ndarray-base-nullary-strided1d-dispatch' );
 *
-*    http://www.apache.org/licenses/LICENSE-2.0
+* var idt = dtypes( 'real_and_generic' );
+* var odt = dtypes( 'all' );
 *
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
+* var table = {
+*     'default': base
+* };
+* var sorthp = new NullaryStrided1dDispatch( table, [ idt ], odt );
+*
+* var xbuf = [ -1.0, 2.0, -3.0 ];
+* var x = new ndarray( 'generic', xbuf, [ xbuf.length ], [ 1 ], 0, 'row-major' );
+*
+* var order = scalar2ndarray( 1.0, {
+*     'dtype': 'generic'
+* });
+*
+* var out = sorthp.assign( x, order );
+* // returns <ndarray>
+*
+* var arr = ndarray2array( x );
+* // returns [ -3.0, -1.0, 2.0 ]
+*
+* var bool = ( out === x );
+* // returns true
 */
-//# sourceMappingURL=index.js.map
+
+// MODULES //
+
+var main = require( './main.js' );
+
+
+// EXPORTS //
+
+module.exports = main;
